@@ -33,7 +33,10 @@ while True:
             begin = input("Enter a letter: ")
 
             if begin in choices:
-                occurrences = [i for i, letter in enumerate(choices) if letter == begin]
+                occurrences = []
+                for i, letter in enumerate(choices):
+                    if letter == begin:
+                        occurrences.append(i)
 
                 for k in occurrences:
                     result[k] = begin  
